@@ -1,0 +1,49 @@
+#comand read write number to bus
+mov bus R1 5 #bus only read 
+mov R1 R2 nop #R general purpes reg
+mov R2 R3 nop# mov moves R2 in to R3
+mov R3 R4 nop#nop = do nothing
+mov R4 R5 nop
+mov R5 R6 nop
+mov R6 R7 nop
+mov R7 R8 nop
+mov R8 JI nop #JI = jump index holds the adres for the next jump 
+mov JI rami nop#rami = ram index the adres of the thing you want to load from ram
+mov rami ram nop #ram read write
+mov ram MI1 nop #MI Math IN
+mov MI1 MI2 nop 
+mov MI2 Mo1 nop #Mo = Math out zahlen output der ALUs
+mov Mo1 MI3 nop
+mov MI3 MI4 nop
+mov MI4 Mo2 nop
+mov Mo2 buswa nop #buswa buswatch 
+#stops bus if number writen to it and on the bus are equal
+mov buswa fi nop#fi = file index points at the thing you want to load from a file
+mov fi nop nop
+mov file nop nop #file only read
+mov rando nop nop# genarate a random 8-bit number only read
+mov bus key 5 #now uses 5 as key
+mov R1 enout nop #encrypting R1 whith key and saving to enout
+mov R1 per nop#periveri read/write register from diverent machine like computer 
+mov poi R1 nop#read position pointer 
+mov jbi R1 nop#read/write jump back index 
+#math
+math nop Mo1 add#adds MI1 and MI2 together and saves it in Mo1
+math nop Mo2 add#same thing just in the second ALU
+math nop Mo1 sub#subtrakts MI2 from MI1
+math nop Mo1 mul#mutiplies MI1 by MI2
+math nop Mo1 div#divides MI1 whith MI2
+math nop Mo1 mud#mudolo of MI1 diviede by MI2
+#jumps
+jmp nop nop nop#jump to the adres in JI
+jmpif1 nop nop nop#jumps if ALU1 returns true
+jmpif2 nop nop nop#jumps if ALU2 returns true
+jmpif1 nop nop same#jumps if MI1 and MI2 are the same 
+jmpif1 nop nop greater#compares if MI2 is greater then MI1 
+jmpif1 nop nop not#negates the output of the operation that hapend one tick befor
+jmpif1 nop nop and#if both ALUs returnd true in the last tick then it jumps
+jmpif1 nop nop or#for all the other gates its the same prinziple
+jmpif1 nop nop nand
+jmpif1 nop nop nor
+jmpif1 nop nop xor
+jmpif1 nop nop xnor
