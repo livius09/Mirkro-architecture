@@ -1,0 +1,14 @@
+01 1f 0d 05 //mov bus MI3 5
+01 1f 0b 01 //mov bus MI2 1
+01 1f 09 0c //mov bus JI 12
+00 00 0c 00 //Maht nop MO1 add
+01 0c 0a 00 //mov MO1 MI1 nop 
+01 0c 0e 00 //mov MO1 MI4 nop
+01 1f 00 0c //mov bus nop same //checks if its them same 
+04 00 00 00 //2ifj nop nop nop //jump whit the negatet result of the same 
+//so basicly 
+//x=0
+//while(true): 
+//  x++ //adrs=12
+//  if(x!=):
+//    jump
