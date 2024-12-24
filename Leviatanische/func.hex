@@ -1,0 +1,20 @@
+01 1f 01 05 //mov bus R1 5
+01 1f 09 20 //mov bus Ji 32
+03 00 00 00 //jmp nop nop nop //jump to adr in Ji(Jump index)
+01 0c 02 00 //mov Mo1 R2 nop //move math out 1 to R2 
+00 00 00 00 //nop nop nop nop
+00 00 00 00 //nop nop nop nop
+00 00 00 00 //nop nop nop nop
+00 00 00 00 //nop nop nop nop
+01 01 0a 00 //mov R1 Mi1 nop //mov R1 to math in 1
+01 1f 0b 01 //mov bus MI2 1 //mov 1 into maht in 2
+02 00 0c 00 //math nop Mo1 Add //add Mi1 and Mi2 is done by saving into maht out 1
+06 00 00 00 //jb nop nop nop //jump back to the next line after the caller
+
+//kinda like a func
+//def inc(n): //at 32
+//  return n+1
+//
+//R1 = 5
+//R2 = inc(R1)
+//
