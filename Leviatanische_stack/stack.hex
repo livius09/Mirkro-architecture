@@ -1,0 +1,18 @@
+01 1f 09 10 //mov bus Ji 10
+03 00 00 00 //jmp nop nop nop
+00 00 00 00 //nop nop nop nop
+00 00 00 00 //nop nop nop nop
+01 1f 09 20 //mov bus Ji 20
+03 00 00 00 //jmp nop nop nop
+06 00 00 00 //ret nop nop nop
+00 00 00 00 //nop nop nop nop
+06 00 00 00 //ret nop nop nop
+//about:
+//def func1():
+//    func2()
+//    return
+//
+//def func2():
+//    return
+//
+//func1()
