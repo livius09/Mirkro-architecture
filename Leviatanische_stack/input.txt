@@ -1,0 +1,6 @@
+ball:
+mov 5 R1 #limga alpha sigma
+mov 1 R2
+ligma:
+mov 10 R3
+mov ball: ji
