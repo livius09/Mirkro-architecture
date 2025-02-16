@@ -1,0 +1,18 @@
+01 1f 13 10 //mov bus stack 10 // push the return adr
+01 1f 13 03 //mov bus stack 3 //push arg 1
+01 1f 13 02 //mov bus stack 2 //push arg 2
+03 1f 00 18 //jmp bus nop 24 //jump to func
+01 13 01 00 //mov stack R1 nop //after returning mov the return val to R1
+00 00 00 00 //nop nop nop nop   //do nothing
+01 13 0a 00 //mov stack Mi1 nop //mov arg 2 into Mi1 
+01 13 0b 00 //mov stack Mi2 nop //mov arg 1 into Mi2
+02 00 0c 00 //math nop MO1 nop //add the two numbers
+01 13 09 00 //mov stack JI nop //mov return adr into JI
+01 0c 13 00 //mov MO1 stack nop //push the result
+03 09 00 00 //jmp JI nop nop //jmp back
+
+//realy close to:
+//def add(a,b):
+//  return a+b 
+//
+//R1=add(2,3)
